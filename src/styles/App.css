@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #424242;
+    color: #FFCC80;
+    padding-top: 64px; /* Adjust this value based on your header height */
+  }
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  footer {
+    margin-top: auto;
+    background: #FFCC80;
+    color: #FFCC80;
+    padding: 20px;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #FFCC80;
+  }
+  
+  h2, h3 {
+    color: #FFCC80;
+  }
+  
