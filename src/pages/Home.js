@@ -19,17 +19,17 @@ const GlowingText = styled(Typography)`
 `;
 
 const GlowingButton = styled(Button)`
-  background: linear-gradient(45deg, #FFCC80 30%, #FFB74D 90%);
+  background: linear-gradient(45deg, #ffa21a 50%, #FF9800 90%);
   border: 0;
   color: white;
   height: 48px;
   padding: 0 30px;
-  box-shadow: 0 3px 5px 2px rgba(255, 204, 128, .3);
+  box-shadow: 0 2px 4px 1px rgba(255, 152, 0, 0.2);
   transition: all 0.3s ease-in-out;
   
   &:hover {
-    background: linear-gradient(45deg, #FFB74D 30%, #FFA726 90%);
-    box-shadow: 0 5px 15px 2px rgba(255, 204, 128, .5);
+    background: linear-gradient(45deg, #FFA726 30%, #FB8C00 90%);
+    box-shadow: 0 3px 10px 2px rgba(255, 152, 0, 0.3);
   }
 `;
 
@@ -42,7 +42,7 @@ const SkillCard = styled(motion.div)`
 `;
 
 // Main component
-const ModernHomepage = () => {
+const Home = () => {
   const [typedText, setTypedText] = useState('');
   const fullText = "Hello, I'm Aydan Maksudovski";
   const controls = useAnimation();
@@ -161,4 +161,4 @@ const ModernHomepage = () => {
   );
 };
 
-export default ModernHomepage;
+export default Home;

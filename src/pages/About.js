@@ -86,11 +86,16 @@ const About = () => {
                 </Typography>
                 <Typography variant="body2" paragraph style={{ color: '#E0E0E0' }}>
                   • Led the development and deployment of the Majesco Policy Administration application
-                  • Automated installation procedures through Jenkins
-                  • Maintained REST APIs and oversaw application administration
-                  • Implemented Enterprise Data Warehouse and Data Analytics platform
                 </Typography>
-
+                <Typography variant="body2" paragraph style={{ color: '#E0E0E0' }}>
+                    • Automated installation procedures through Jenkins
+                </Typography>
+                <Typography variant="body2" paragraph style={{ color: '#E0E0E0' }}>
+                    • Maintained REST APIs and oversaw application administration
+                </Typography>
+                <Typography variant="body2" paragraph style={{ color: '#E0E0E0' }}>
+                    • Implemented Enterprise Data Warehouse and Data Analytics platform
+                </Typography>
                 <Typography variant="h6" gutterBottom style={{ color: '#FFCC80' }}>
                   Eloquence Author / Document Generation & Distribution Specialist
                 </Typography>
@@ -98,10 +103,15 @@ const About = () => {
                   Ethan Allen Workforce Solutions | May 2019 – Dec. 2020
                 </Typography>
                 <Typography variant="body2" paragraph style={{ color: '#E0E0E0' }}>
-                  • Led implementation of 562 policy administration insurance documents
-                  • Collaborated with Product Owners and QA team for comprehensive testing
-                  • Developed complex backend code in Eloquence for document generation
+                    • Led implementation of 562 policy administration insurance documents
                 </Typography>
+                <Typography variant="body2" paragraph style={{ color: '#E0E0E0' }}>
+                    • Collaborated with Product Owners and QA team for comprehensive testing         
+                </Typography>
+                <Typography variant="body2" paragraph style={{ color: '#E0E0E0' }}>
+                    • Developed complex backend code in Eloquence for document generation
+                </Typography>
+
               </Box>
             </StyledPaper>
           </motion.div>
