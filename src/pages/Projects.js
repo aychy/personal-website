@@ -93,23 +93,26 @@ const Projects = () => {
 
           <motion.div variants={itemVariants}>
             <ProjectCard>
-              <CardContent>
-                <ProjectTitle variant="h5">Project 2</ProjectTitle>
+                <CardContent>
+                <ProjectTitle variant="h5">Cover Letter Generator</ProjectTitle>
                 <ProjectDescription paragraph>
-                  Description for Project 2. This project demonstrates another aspect of my skills, showcasing different technologies or methods.
+                    This application helps users generate personalized cover letters quickly and efficiently. The app allows you to input key details such as your name, the position you're applying for, the company name, your experience, and relevant skills. With a few clicks, you can generate a professional cover letter tailored to your job application.
+                    <br /><br />
+                    In the future, the app will integrate with the OpenAI API to generate even more tailored and sophisticated cover letters, taking into account the specific job descriptions and industry trends.
                 </ProjectDescription>
-              </CardContent>
-              <CardActions>
+                </CardContent>
+                <CardActions>
                 <ProjectButton
-                  component="a"
-                  href="https://project2.example.com"
-                  target="_blank"
+                    component="a"
+                    href="https://coverlettercraft.onrender.com"
+                    target="_blank"
                 >
-                  View Project
+                    View Project
                 </ProjectButton>
-              </CardActions>
+                </CardActions>
             </ProjectCard>
-          </motion.div>
+        </motion.div>
+
 
           <motion.div variants={itemVariants}>
             <ProjectCard>
