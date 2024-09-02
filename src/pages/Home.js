@@ -3,6 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { Typography, Button, Box, Container, Grid } from '@mui/material';
 import { styled } from '@mui/system';
 import { Code, Database, Server, GitBranch } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 // Styled components (unchanged)
 const GradientBackground = styled(Box)`
@@ -19,19 +20,21 @@ const GlowingText = styled(Typography)`
 `;
 
 const GlowingButton = styled(Button)`
-  background: linear-gradient(45deg, #ffa21a 50%, #FF9800 90%);
+  background: linear-gradient(45deg, #ffd69a 50%, #ffc267 90%);
   border: 0;
-  color: white;
+  color: #424242;
+  font-weight: bold; /* Make the text bold */
   height: 48px;
   padding: 0 30px;
-  box-shadow: 0 2px 4px 1px rgba(255, 152, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(255, 152, 0, 0.3); /* Slight glow effect */
   transition: all 0.3s ease-in-out;
   
   &:hover {
-    background: linear-gradient(45deg, #FFA726 30%, #FB8C00 90%);
-    box-shadow: 0 3px 10px 2px rgba(255, 152, 0, 0.3);
+    background: linear-gradient(45deg, #ffcc80 30%, #ffb84d 90%);
+    box-shadow: 0 3px 12px rgba(255, 152, 0, 0.4); /* Enhanced glow on hover */
   }
 `;
+
 
 const SkillCard = styled(motion.div)`
   background: rgba(255, 255, 255, 0.05);
@@ -95,9 +98,11 @@ const Home = () => {
                 Experienced in ensuring seamless system performance and accelerating delivery.
               </Typography>
               <Box mt={4}>
+                <Link to="/projects" style={{ textDecoration: 'none' }}>
                 <GlowingButton variant="contained" size="large">
                   View My Projects
                 </GlowingButton>
+                </Link>
               </Box>
             </motion.div>
           </Grid>
