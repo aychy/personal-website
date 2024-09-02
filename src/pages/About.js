@@ -82,7 +82,7 @@ const About = () => {
                   Software Engineer
                 </Typography>
                 <Typography variant="subtitle1" gutterBottom style={{ color: '#E0E0E0' }}>
-                  New York Property Insurance Underwriting Association | Jan. 2021 – Present
+                  New York Property Insurance Underwriting Association | January 2021 – Present
                 </Typography>
                 <Typography variant="body2" paragraph style={{ color: '#E0E0E0' }}>
                   • Led the development and deployment of the Majesco Policy Administration application
@@ -100,7 +100,7 @@ const About = () => {
                   Eloquence Author / Document Generation & Distribution Specialist
                 </Typography>
                 <Typography variant="subtitle1" gutterBottom style={{ color: '#E0E0E0' }}>
-                  Ethan Allen Workforce Solutions | May 2019 – Dec. 2020
+                  Ethan Allen Workforce Solutions | May 2019 – December 2020
                 </Typography>
                 <Typography variant="body2" paragraph style={{ color: '#E0E0E0' }}>
                     • Led implementation of 562 policy administration insurance documents
@@ -133,7 +133,7 @@ const About = () => {
                   Bachelor of Science in Computer Science
                 </Typography>
                 <Typography variant="subtitle1" gutterBottom style={{ color: '#E0E0E0' }}>
-                  College of Staten Island | Sep. 2017 – May 2020
+                  College of Staten Island | September 2017 – May 2020
                 </Typography>
               </Box>
             </StyledPaper>
@@ -153,8 +153,10 @@ const About = () => {
               </Grid>
               <Box mt={2}>
                 <Typography variant="body1" paragraph style={{ color: '#E0E0E0' }}>
-                  • Google Data Analytics | Google | April 2023
-                  • Core Java | Learn Quest | July 2024
+                    • Google Data Analytics | Google | April 2023
+                </Typography>
+                <Typography variant="body1" paragraph style={{ color: '#E0E0E0' }}>
+                    • Core Java | Learn Quest | July 2024
                 </Typography>
               </Box>
             </StyledPaper>
