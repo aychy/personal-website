@@ -4,6 +4,12 @@ import { AppBar, Toolbar, Typography, IconButton, useMediaQuery, useTheme, Box }
 import { styled } from '@mui/system';
 import { Link } from 'react-router-dom';
 import { Menu, X, Sun, Moon } from 'lucide-react';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import XIcon from '@mui/icons-material/X';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+
+
 
 const StyledAppBar = styled(AppBar)`
   background: rgba(26, 26, 26, 0.8);
@@ -89,37 +95,25 @@ const Header = () => {
   return (
     <StyledAppBar position="fixed">
       <StyledToolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: '#FFCC80' }}>
-          AM
-        </Typography>
-        {isMobile ? (
-          <>
-            <IconButton color="inherit" onClick={toggleMenu} aria-label="menu">
-              <Menu color="#FFCC80" />
-            </IconButton>
-            <AnimatePresence>
-              {isOpen && (
-                <MobileMenu
-                  initial="closed"
-                  animate="open"
-                  exit="closed"
-                  variants={menuVariants}
-                  transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                >
-                  <IconButton color="inherit" onClick={toggleMenu} aria-label="close menu" sx={{ position: 'absolute', top: 10, right: 10 }}>
-                    <X color="#FFCC80" />
-                  </IconButton>
-                  {navItems.map((item) => (
-                    <StyledLink key={item.name} to={item.path} onClick={toggleMenu}>
-                      <Typography variant="h6">{item.name}</Typography>
-                    </StyledLink>
-                  ))}
-                </MobileMenu>
-              )}
-            </AnimatePresence>
-          </>
-        ) : (
-          <NavLinks>
+        <Box display="flex" alignItems="center">
+          <Typography variant="h6" component="div" sx={{ color: '#FFCC80', marginRight: 2 }}>
+            AM
+          </Typography>
+          <IconButton component="a" href="https://instagram.com/amakzz_" target="_blank" rel="noopener noreferrer" sx={{ color: '#FFCC80' }}>
+            <InstagramIcon />
+          </IconButton>
+          <IconButton component="a" href="https://x.com/amakzz_" target="_blank" rel="noopener noreferrer" sx={{ color: '#FFCC80' }}>
+            <XIcon />
+          </IconButton>
+          <IconButton component="a" href="https://www.linkedin.com/in/aydan-maksudovski-299367143/" target="_blank" rel="noopener noreferrer" sx={{ color: '#FFCC80' }}>
+            <LinkedInIcon />
+          </IconButton>
+          <IconButton component="a" href="https://github.com/aychy" target="_blank" rel="noopener noreferrer" sx={{ color: '#FFCC80' }}>
+            <GitHubIcon />
+          </IconButton>
+        </Box>
+        {!isMobile && (
+          <NavLinks sx={{ marginLeft: 'auto' }}>
             {navItems.map((item) => (
               <StyledLink key={item.name} to={item.path}>
                 {item.name}
@@ -131,6 +125,28 @@ const Header = () => {
           {isDarkMode ? <Sun color="#FFCC80" /> : <Moon color="#FFCC80" />}
         </IconButton>
       </StyledToolbar>
+      {isMobile && (
+        <AnimatePresence>
+          {isOpen && (
+            <MobileMenu
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={menuVariants}
+              transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+            >
+              <IconButton color="inherit" onClick={toggleMenu} aria-label="close menu" sx={{ position: 'absolute', top: 10, right: 10 }}>
+                <X color="#FFCC80" />
+              </IconButton>
+              {navItems.map((item) => (
+                <StyledLink key={item.name} to={item.path} onClick={toggleMenu}>
+                  <Typography variant="h6">{item.name}</Typography>
+                </StyledLink>
+              ))}
+            </MobileMenu>
+          )}
+        </AnimatePresence>
+      )}
     </StyledAppBar>
   );
 };
