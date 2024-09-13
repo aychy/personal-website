@@ -71,19 +71,23 @@ const Projects = () => {
             My Projects
           </GlowingText>
 
+          {/* New ProjectCard for Muslim Center of Staten Island */}
           <motion.div variants={itemVariants}>
             <ProjectCard>
               <CardContent>
-                <ProjectTitle variant="h5">Project 1</ProjectTitle>
+                <ProjectTitle variant="h5">Muslim Center of Staten Island</ProjectTitle>
                 <ProjectDescription paragraph>
-                  Description for Project 1. This is a brief overview of what the project is about, its key features, and any notable achievements.
+                  This project is a website for the Muslim Center of Staten Island, a welcoming community dedicated to serving Allah and the local community. The website features information about upcoming events, prayer times, and a donation option.
+                  <br /><br />
+                  The site includes sections for weekly events like Halaqa on Saturdays and Quranic & Islamic Studies on Mondays, as well as special events. It also provides real-time prayer times for the local community.
                 </ProjectDescription>
               </CardContent>
               <CardActions>
                 <ProjectButton
                   component="a"
-                  href="https://project1.example.com"
+                  href="https://mcsi.onrender.com/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   View Project
                 </ProjectButton>
@@ -91,17 +95,18 @@ const Projects = () => {
             </ProjectCard>
           </motion.div>
 
+          {/* Existing ProjectCards */}
           <motion.div variants={itemVariants}>
             <ProjectCard>
-                <CardContent>
-                <ProjectTitle variant="h5">Cover Letter Generator</ProjectTitle>
+              <CardContent>
+                <ProjectTitle variant="h5">CoverLetterCraft</ProjectTitle>
                 <ProjectDescription paragraph>
                     This application helps users generate personalized cover letters quickly and efficiently. The app allows you to input key details such as your name, the position you're applying for, the company name, your experience, and relevant skills. With a few clicks, you can generate a professional cover letter tailored to your job application.
                     <br /><br />
                     In the future, the app will integrate with the OpenAI API to generate even more tailored and sophisticated cover letters, taking into account the specific job descriptions and industry trends.
                 </ProjectDescription>
-                </CardContent>
-                <CardActions>
+              </CardContent>
+              <CardActions>
                 <ProjectButton
                     component="a"
                     href="https://coverlettercraft.onrender.com"
@@ -109,10 +114,9 @@ const Projects = () => {
                 >
                     View Project
                 </ProjectButton>
-                </CardActions>
+              </CardActions>
             </ProjectCard>
-        </motion.div>
-
+          </motion.div>
 
           <motion.div variants={itemVariants}>
             <ProjectCard>

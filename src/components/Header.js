@@ -9,8 +9,6 @@ import XIcon from '@mui/icons-material/X';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-
-
 const StyledAppBar = styled(AppBar)`
   background: rgba(26, 26, 26, 0.8);
   backdrop-filter: blur(10px);
@@ -51,6 +49,29 @@ const StyledLink = styled(Link)`
     &:after {
       transform: scaleX(1);
     }
+  }
+`;
+
+const LogoLink = styled(Link)`
+  text-decoration: none;
+  color: #FFCC80;
+  position: relative;
+  padding: 5px 0;  // Add padding to create space for the underline
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;  // Align to the bottom of the padding
+    left: 0;
+    background-color: #FFCC80;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
   }
 `;
 
@@ -96,9 +117,19 @@ const Header = () => {
     <StyledAppBar position="fixed">
       <StyledToolbar>
         <Box display="flex" alignItems="center">
-          <Typography variant="h6" component="div" sx={{ color: '#FFCC80', marginRight: 2 }}>
-            AM
-          </Typography>
+          <LogoLink to="/">
+            <Typography 
+              variant="h6" 
+              component="div" 
+              sx={{ 
+                color: '#FFCC80', 
+                marginRight: 2,
+                marginLeft: 1.5,  // Add left margin to move AM slightly to the right
+              }}
+            >
+              AM
+            </Typography>
+          </LogoLink>
           <IconButton component="a" href="https://instagram.com/amakzz_" target="_blank" rel="noopener noreferrer" sx={{ color: '#FFCC80' }}>
             <InstagramIcon />
           </IconButton>
