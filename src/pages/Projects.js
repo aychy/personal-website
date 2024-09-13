@@ -39,6 +39,13 @@ const GlowingText = styled(Typography)`
   text-shadow: 0 0 10px rgba(255, 204, 128, 0.5);
 `;
 
+const NoteText = styled(Typography)`
+  color: #FFCC80;
+  font-style: italic;
+  margin-bottom: 20px;
+  text-align: center;
+`;
+
 const Projects = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -71,13 +78,17 @@ const Projects = () => {
             My Projects
           </GlowingText>
 
+          <NoteText variant="body1">
+            Note: All projects are works in progress and are continuously being upgraded.
+          </NoteText>
+
           {/* New ProjectCard for Muslim Center of Staten Island */}
           <motion.div variants={itemVariants}>
             <ProjectCard>
               <CardContent>
                 <ProjectTitle variant="h5">Muslim Center of Staten Island</ProjectTitle>
                 <ProjectDescription paragraph>
-                  This project is a website for the Muslim Center of Staten Island, a welcoming community dedicated to serving Allah and the local community. The website features information about upcoming events, prayer times, and a donation option.
+                  This project is a website for the Muslim Center of Staten Island. The website features information about upcoming events, prayer times, and a donation option.
                   <br /><br />
                   The site includes sections for weekly events like Halaqa on Saturdays and Quranic & Islamic Studies on Mondays, as well as special events. It also provides real-time prayer times for the local community.
                 </ProjectDescription>
